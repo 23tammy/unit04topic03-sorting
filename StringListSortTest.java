@@ -19,4 +19,18 @@ public class StringListSortTest {
         actualOutput = inputItems;
         assertEquals(expectedOutput, actualOutput);
     }
+
+    @Test
+    public void testInsertionSort() {
+        ArrayList<String> inputItems;
+        ArrayList<String> expectedOutput;
+        ArrayList<String> actualOutput;
+
+        // some positive numbers
+        inputItems = new ArrayList<>(Arrays.asList("there", "is", "the", "mountain"));
+        StringListSort.insertionSort(inputItems);
+        expectedOutput = new ArrayList<>(Arrays.asList("is", "mountain", "the", "there"));
+        actualOutput = inputItems;
+        assertEquals(expectedOutput, actualOutput);
+    }
 }
